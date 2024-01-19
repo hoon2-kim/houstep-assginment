@@ -10,12 +10,16 @@ import { QueryRunnerDeco } from 'src/common/decorators/query-runner.decorator';
 import { TransactionInterceptor } from 'src/common/interceptors/transaction.interceptor';
 import { xlsxFileFilter } from 'src/common/utils/fileFilter';
 import { QueryRunner } from 'typeorm';
-import { XlsxUploadService } from './excel.service';
+import { XlsxUploadService } from './xlsx-upload.service';
+import { ApiTags } from '@nestjs/swagger';
+import { ApiXlsxUploadSwagger } from './xlsx-upload.swagger';
 
+@ApiTags('xlsx-upload')
 @Controller('xlsx-upload')
 export class XlsxUploadController {
   constructor(private readonly xlsxUploadService: XlsxUploadService) {}
 
+  @ApiXlsxUploadSwagger('xlsx파일 데이터 DB업로드')
   @Post()
   @UseInterceptors(
     FileInterceptor('file', {

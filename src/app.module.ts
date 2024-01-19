@@ -6,7 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { OrdersModule } from './orders/orders.module';
 import { OrderEntity } from './orders/entities/order.entity';
 import { CustomerEntity } from './customers/entities/customer.entity';
-import { XlsxUploadModule } from './xlsx-upload/excel.module';
+import { XlsxUploadModule } from './xlsx-upload/xlsx-upload.module';
 import { CustomersModule } from './customers/customers.module';
 
 @Module({

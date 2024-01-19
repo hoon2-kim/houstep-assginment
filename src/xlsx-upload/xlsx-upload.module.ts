@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { XlsxUploadService } from './excel.service';
-import { XlsxUploadController } from './excel.controller';
+import { XlsxUploadService } from './xlsx-upload.service';
+import { XlsxUploadController } from './xlsx-upload.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CustomerEntity } from 'src/customers/entities/customer.entity';
 import { OrderEntity } from 'src/orders/entities/order.entity';
