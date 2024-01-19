@@ -2,9 +2,23 @@
 
 ---
 
+## 실행방법
+
+```
+yarn install
+
+.env 입력
+
+yarn start:dev
+```
+
+## Local환경 Swagger 주소
+
+http://localhost:3333/api-docs
+
 ## DDL
 
-```bash
+```
 CREATE DATABASE houstep;
 
 use houstep;
