@@ -18,14 +18,14 @@ export class PageOptionDto {
   @ApiPropertyOptional({
     description: '페이지당 아이템 수',
     type: 'number',
-    default: 15,
+    default: 50,
     minimum: 1,
-    maximum: 50,
+    maximum: 100,
   })
   @IsOptional()
   @IsInt()
   @Min(1)
-  @Max(50)
+  @Max(100)
   @Type(() => Number)
   take?: number = 50;
 
